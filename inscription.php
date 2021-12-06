@@ -1,10 +1,6 @@
 <?php
 require 'header.php';
 $errormess = '';
-$bdd_username = 'raphael';
-$bdd_password = '123456';
-$bdd_name     = 'raphael-gravagna_moduleconnexion';
-$bdd_host     = 'localhost';
 $bdd = mysqli_connect($bdd_host, $bdd_username, $bdd_password,$bdd_name);
 mysqli_set_charset($bdd, 'utf8');
 

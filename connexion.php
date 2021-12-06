@@ -13,16 +13,7 @@ if (isset($_POST['logout']))
     header('location:connexion.php');
 } // ! A enlever de la page connexion
 
-if(isset($_POST['connexion'])) {
-    $bdd_username = 'root';
-    $bdd_password = '';
-    $bdd_name     = 'moduleconnexion';
-    $bdd_host     = 'localhost';
-    $bdd = mysqli_connect($bdd_host, $bdd_username, $bdd_password,$bdd_name)
-           or die('could not connect to database');
-
-    mysqli_set_charset($bdd, 'utf8');
-    
+if(isset($_POST['connexion'])) { 
     $login = $_POST['username'];
     $mdp = $_POST['password'];
 
