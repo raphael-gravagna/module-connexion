@@ -2,10 +2,10 @@
 require 'header.php';
 session_start();
 $errormess = '';
-$bdd_username = 'raphael-gravagna';
+$bdd_username = 'raphael';
 $bdd_password = '123456';
 $bdd_name     = 'raphael-gravagna_moduleconnexion';
-$bdd_host     = 'localhost:3306';
+$bdd_host     = 'localhost';
 $bdd = mysqli_connect($bdd_host, $bdd_username, $bdd_password,$bdd_name);
 mysqli_set_charset($bdd, 'utf8');
 $Requete = mysqli_query($bdd, "SELECT * FROM `utilisateurs`");
