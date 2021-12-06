@@ -2,7 +2,7 @@
 require 'header.php';
 $errormess = '';
 $bdd_username = 'raphael-gravagna';
-$bdd_password = '12345';
+$bdd_password = '123456';
 $bdd_name     = 'raphael-gravagna_moduleconnexion';
 $bdd_host     = 'localhost:3306';
 $bdd = mysqli_connect($bdd_host, $bdd_username, $bdd_password,$bdd_name);
