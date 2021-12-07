@@ -7,7 +7,7 @@ mysqli_set_charset($bdd, 'utf8');
 if(isset($_SESSION['login'])) {
     header('Location:profil.php');
 }   /*/ouverture d'une session, si login est renseigné redirection vers la page profil.php*/
-var_dump($_SESSION);
+//var_dump($_SESSION);
 
 if(isset($_POST['connexion'])){
 if(isset($_POST['prenom']) && isset($_POST['nom']) && isset($_POST['username']) && isset($_POST['password']) && isset($_POST['Cpassword'])) {
