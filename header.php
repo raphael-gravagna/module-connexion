@@ -1,8 +1,8 @@
 <?php session_start();
 $errormess = '';
-$bdd_username = 'raphael';
-$bdd_password = '123456';
-$bdd_name     = 'raphael-gravagna_moduleconnexion';
+$bdd_username = 'root';
+$bdd_password = '';
+$bdd_name     = 'moduleconnexion';
 $bdd_host     = 'localhost';
 $bdd = mysqli_connect($bdd_host, $bdd_username, $bdd_password,$bdd_name);
 mysqli_set_charset($bdd, 'utf8');?>
@@ -32,9 +32,13 @@ mysqli_set_charset($bdd, 'utf8');?>
         echo "<li><a href='inscription.php'>S'inscrire</a></li>";
         }
         ?>
-        <li><a href="profil.php">Profil</a></li>
         <?php
         if(isset($_SESSION['user'])) {
+        echo "<li><a href='profil.php'>Profil</a></li>";
+        }
+        ?>
+        <?php
+        if(isset($_SESSION['user']) || isset($_SESSION['admin']) ) {
            echo "<li><a href='logout.php'><input type='button' value='Déconnexion'></a></li>";
         }
       ?>

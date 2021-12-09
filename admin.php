@@ -1,11 +1,10 @@
 <?php
 require 'header.php';
-session_start();
 $errormess = '';
 $Requete = mysqli_query($bdd, "SELECT * FROM `utilisateurs`");
 $Users = mysqli_fetch_all($Requete, MYSQLI_ASSOC);
 
-if( !isset($_SESSION['user']) ) {
+if(isset($_SESSION['user']) ) {
     header("Location: index.php");
     exit;
 }
